@@ -1,0 +1,81 @@
+<!-- user-list.component.html -->
+<!-- <div>
+    <h2>User List</h2>
+    <ul>
+      <li *ngFor="let user of users">
+        <p>ID: {{ user.id }}</p>
+        <p>Username: {{ user.username }}</p>
+        <p>Created At: {{ user.createdAt }}</p>
+        <p>Updated At: {{ user.updatedAt }}</p>
+      </li>
+    </ul>
+  </div> -->
+  <!-- <div>
+    <h2>User List</h2>
+    <ul>
+      <li *ngFor="let user of users">
+        <p>ID: {{ user.id }}</p>
+        <p>Username: {{ user.username }}</p>
+        <p>Password: {{ user.password }}</p>
+      </li>
+    </ul>
+  </div> -->
+  <!-- <div class="container mt-4">
+    <h2>User List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Username</th>
+          <th scope="col">Password</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.password }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editUser(user)">
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">
+              <i class="bi bi-trash"></i>
+            </button
+  
+   -->
+   <div class="container mt-4">
+    <button (click)="createuser()">create-user</button>
+    <h2>User List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">slno.#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Password</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+            <td>{{ i + 1 }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.password }}</td>
+          <!-- <td>
+            <button class="btn btn-primary btn-sm" (click)="editUser(user)">
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td> -->
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editUser(user)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
